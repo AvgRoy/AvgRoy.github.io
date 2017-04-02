@@ -1,8 +1,44 @@
-body{
-  background-color: rgb(49, 51, 53);
+body {
+  background-color: #f6f6f6;
+  border: 15px solid #008080;
+  margin: 0;
+  padding: 0;
 }
 
-.filler {
-	color: rgb(256, 256, 256);
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.title{
+  font-family: 'Inconsolata', monospace;
+  font-weight: normal;
+  padding: 0;
+  margin: auto;
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+.line{
+  background-color: #979797;
+  width: 50%;
+  height: 1px;
+  margin-top: 1%;
+  margin-left: 24%;
+}
+
+.icon1{
+  padding: 0;
+  margin: auto;
+  text-align: right;
+  margin-right: 26.5%;
+  margin-top: -3.5%;
+}
+
+.about{
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: normal;
+  padding: 0;
+  margin: auto;
+  margin-top: 3%;
+  margin-left: 25%;
+}
+
+.resume{
+  color: #008080;
 }
