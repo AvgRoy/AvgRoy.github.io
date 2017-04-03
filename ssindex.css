@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 
+/*for mobile*/
 @media screen and (min-width: 660px){
   body {
     border: 15px solid #008080;
@@ -20,6 +21,7 @@ body {
   margin-left: 25%;
 }
 
+/*for mobile*/
 @media screen and (max-width: 660px){
   .title{
     text-align: center;
@@ -43,6 +45,7 @@ body {
   margin-top: -45px;
 }
 
+/*for mobile*/
 @media screen and (max-width: 660px){
   .icon1{
     text-align: center;
@@ -50,6 +53,18 @@ body {
     margin-right: 0;
     margin-top: 15px;
   }
+}
+
+.fa-linkedin-square:hover{
+  color: #0077b5;
+}
+
+.fa-github-square:hover{
+  color: #333;
+}
+
+.fa-twitter-square:hover{
+  color: #1da1f2;
 }
 
 .about{
