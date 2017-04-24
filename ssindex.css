@@ -55,6 +55,7 @@ body {
   }
 }
 
+/*icon color change on hover*/
 .fa-linkedin-square:hover{
   color: #0077b5;
 }
