@@ -1,0 +1,31 @@
+body {
+  background-color:  #111111;
+}
+
+.center{
+  clear:both;
+  content:"";
+  display:
+  block;
+  margin:0 auto;
+  max-width:1020px;
+  width:100%;
+  padding:0 10px;
+  box-sizing:border-box;
+  text-align:center
+}
+
+.heading{
+  font-family: 'Open Sans', sans-serif;
+  font-size:45px;
+  font-weight:lighter
+}
+
+.site-content{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  left:0;
+  top:25%;
+  color:#fff
+}
