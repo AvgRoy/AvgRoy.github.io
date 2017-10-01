@@ -34,18 +34,20 @@ padding:0;
   position:relative;
 }
 
+@media screen and (max-width: 1200px){
+  .site-content{
+  left: 25%;
+  text-align: center;
+  }
+}
+
+
+
 .webImage{
   border: 2px solid #008080;
   margin-left: 10%;
   height: 135;
   width: 240;
-}
-
-@media screen and (max-width: 660px){
-  .webImage{
-    margin-left: 0;
-    margin-top: 0;
-  }
 }
 
 .website{
@@ -64,6 +66,8 @@ padding:0;
     text-align: center;
     margin-left: 0;
     margin-top: 0;
+    left: 25%;
+    margin: auto;
   }
 }
 
@@ -102,27 +106,11 @@ padding:0;
   width: 240;
 }
 
-@media screen and (max-width: 1200px){
-  .toDoImage{
-    text-align: center;
-    margin-left: 100%;
-    margin-top: 0;
-  }
-}
-
 .headingToDo{
   color: #009028;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   margin-top: -105px;
-}
-
-@media screen and (max-width: 1200px){
-  .headingToDo{
-    text-align: center;
-    margin-left: 0;
-    margin-top: 0;
-  }
 }
 
 .todolink{
