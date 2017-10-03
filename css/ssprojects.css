@@ -13,7 +13,6 @@ margin-top: 0;
 margin-bottom: 0;
 padding:0;
 padding-bottom: 50px;
-overflow: hidden;
 
 }
 
@@ -173,7 +172,7 @@ overflow: hidden;
       padding: 0px;
       overflow-x: hidden;
     border-left: 10px solid #008080;
-    border-right: 10px solid #009028;
+    /*border-right: 10px solid #009028;*/
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
