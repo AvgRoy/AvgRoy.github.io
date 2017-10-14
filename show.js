@@ -19,7 +19,7 @@ var count = 0;
 
 function setup(){
   createCanvas(600, 400);
-  frameRate(60);
+  frameRate(120);
   start();
 }
 
