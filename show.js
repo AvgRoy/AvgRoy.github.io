@@ -1,5 +1,5 @@
 var field = [];
-var scl = 5;
+var scl = 20;
 var stop = false;
 var fireFighterResponse = 0.0;
 var igniteChance = 1-fireFighterResponse;
