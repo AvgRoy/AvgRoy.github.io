@@ -1,5 +1,5 @@
 var field = [];
-var scl = 10;
+var scl = 5;
 var stop = false;
 var fireFighterResponse = 0.0;
 var igniteChance = 1-fireFighterResponse;
@@ -18,15 +18,15 @@ var count = 0;
 
 
 function setup(){
-  createCanvas(720, 480);
+  createCanvas(360, 240);
   frameRate(20);
   start();
 }
 
 function start(){
-    for(var i=0; i<720; i+=scl){
+    for(var i=0; i<360; i+=scl){
         field[i] = [];
-        for(var j=0; j<480; j+=scl){
+        for(var j=0; j<240; j+=scl){
             field[i][j] = new automatons(i, j);
         }
     }
@@ -43,7 +43,7 @@ function updateCells(i, j){
             count++;
         }
         //console.log("i:"+i+" j:"+j);
-        if(j<480-scl && field[i][j+scl].color==1){
+        if(j<240-scl && field[i][j+scl].color==1){
 
             // field[i][j+scl].color = 2;
             toChange[count] = [i, j+scl];
@@ -54,7 +54,7 @@ function updateCells(i, j){
             toChange[count] = [i-scl, j];
             count++;
         }
-        if(i<720-scl && field[i+scl][j].color==1){
+        if(i<360-scl && field[i+scl][j].color==1){
             // field[i+scl][j].color = 2;
             toChange[count] = [i+scl, j];
             count++;
@@ -64,17 +64,17 @@ function updateCells(i, j){
             toChange[count] = [i-scl, j-scl];
             count++;
         }
-        if(j<480-scl && i<720-scl && field[i+scl][j+scl].color==1){
+        if(j<240-scl && i<360-scl && field[i+scl][j+scl].color==1){
             // field[i+scl][j+scl].color = 2;
             toChange[count] = [i+scl, j+scl];
             count++;
         }
-        if(i>1 && j<480-scl && field[i-scl][j+scl].color==1){
+        if(i>1 && j<240-scl && field[i-scl][j+scl].color==1){
             // field[i-scl][j+scl].color = 2;
             toChange[count] = [i-scl, j+scl];
             count++;
         }
-        if(i<720-scl && j>1 && field[i+scl][j-scl].color==1){
+        if(i<360-scl && j>1 && field[i+scl][j-scl].color==1){
             // field[i+scl][j-scl].color = 2;
             toChange[count] = [i+scl, j-scl];
             count++;
@@ -92,8 +92,8 @@ function draw(){
         noStroke();
         toChange = [];
         count = 0;
-        for(var i=0; i<720; i+=scl){
-            for(var j=0; j<480; j+=scl){
+        for(var i=0; i<360; i+=scl){
+            for(var j=0; j<240; j+=scl){
                 field[i][j].update();
                 updateCells(i, j);
                 field[i][j].show();
