@@ -1,6 +1,6 @@
 var generation = [];
 var nextGeneration = [];
-var scl = 20;
+var scl = 10;
 var count = 0;
 var neighbors = 0;
 var fRate = 20;
