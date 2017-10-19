@@ -3,7 +3,7 @@ var nextGeneration = [];
 var scl = 10;
 var count = 0;
 var neighbors = 0;
-var fRate = 20;
+var fRate = ;
 var stop = true;
 
 //example 0 -> game of life 1-> fire
@@ -94,6 +94,7 @@ function gliderGunStart(){
 
 function changeFrames() {
   fRate = sel.value();
+  console.log(fRate);
   frames();
 }
 
