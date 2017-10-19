@@ -40,6 +40,15 @@ function frames(){
     frameRate(fRate);
 }
 
+function mousePressed(){
+    example = 0;
+    stop = !stop;
+    fRate = 5;
+    start();
+    frames();
+    stop = !stop;
+}
+
 function startGameOfLife(){
     for(var i=0; i<680; i+=scl){
         generation[i] = [];
