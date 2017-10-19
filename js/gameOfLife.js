@@ -28,6 +28,10 @@ function setup(){
     var canvas = createCanvas(680, 460);
     canvas.parent('sketch-holder');
     start();
+    
+    button = createButton('submit');
+    button.position(480, 65);
+    button.mousePressed(gameStart);
 }
 
 function start(){
@@ -40,7 +44,7 @@ function frames(){
     frameRate(fRate);
 }
 
-function mousePressed(){
+function gameStart(){
     stop = !stop;
     example = 0;
     fRate = 5;
