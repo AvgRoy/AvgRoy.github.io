@@ -41,9 +41,10 @@ function frames(){
 }
 
 function mousePressed(){
-    example = 0;
     stop = !stop;
+    example = 0;
     fRate = 5;
+    randomStart = true;
     start();
     frames();
     stop = !stop;
