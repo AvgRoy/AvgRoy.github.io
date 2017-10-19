@@ -52,6 +52,7 @@ function setup(){
     sel.option(45);
     sel.option(60);
     sel.option(120);
+    sel.selected(25);
     sel.changed(changeFrames);
 }
 
