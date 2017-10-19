@@ -30,7 +30,7 @@ function setup(){
     start();
     
     button = createButton("Conway's Game of Life");
-    button.position(width/2, 1000);
+    button.position(height/2, width/2);
     button.mousePressed(gameStart);
 }
 
