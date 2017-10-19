@@ -3,7 +3,7 @@ var nextGeneration = [];
 var scl = 10;
 var count = 0;
 var neighbors = 0;
-var fRate = ;
+var fRate = 25;
 var stop = true;
 
 //example 0 -> game of life 1-> fire
