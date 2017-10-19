@@ -42,7 +42,7 @@ function setup(){
     button3.mousePressed(gliderGunStart);
     
     sel = createSelect();
-    sel.position(10, 10);
+    sel.position(height/2, width/2+80);
     sel.option('5');
     sel.option('10');
     sel.option('15');
@@ -93,7 +93,7 @@ function gliderGunStart(){
 }
 
 function changeFrames() {
-  fRame = sel.value();
+  fRate = sel.value();
   frames();
 }
 
