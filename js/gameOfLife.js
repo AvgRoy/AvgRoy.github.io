@@ -34,7 +34,7 @@ function setup(){
     button.mousePressed(gameStart);
     
     button2 = createButton("Fire Simulation");
-    button2.position(height/2+10, width/2);
+    button2.position(height/2, width/2+20);
     button2.mousePressed(fireStart);
 }
 
@@ -58,7 +58,7 @@ function gameStart(){
     stop = !stop;
 }
 
-function gameStart(){
+function fireStart(){
     stop = !stop;
     example = 1;
     fRate = 20;
