@@ -29,8 +29,8 @@ function setup(){
     canvas.parent('sketch-holder');
     start();
     
-    button = createButton('submit');
-    button.position(480, 65);
+    button = createButton("Conway's Game of Life");
+    button.position(width/2, 1000);
     button.mousePressed(gameStart);
 }
 
