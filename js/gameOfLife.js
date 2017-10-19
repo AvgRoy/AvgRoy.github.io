@@ -93,8 +93,7 @@ function gliderGunStart(){
 }
 
 function changeFrames() {
-  fRate = sel.value();
-  console.log(parseInt(fRate));
+  fRate = parseInt(sel.value());
   frames();
 }
 
