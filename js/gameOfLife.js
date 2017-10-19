@@ -36,6 +36,10 @@ function setup(){
     button2 = createButton("Fire Simulation");
     button2.position(height/2, width/2+40);
     button2.mousePressed(fireStart);
+    
+    button3 = createButton("Fire Simulation");
+    button3.position(height/2, width/2-40);
+    button3.mousePressed(gliderGunStart);
 }
 
 function start(){
@@ -53,6 +57,7 @@ function gameStart(){
     example = 0;
     fRate = 5;
     randomStart = true;
+    gliderGun = false;
     start();
     frames();
     stop = !stop;
@@ -62,7 +67,19 @@ function fireStart(){
     stop = !stop;
     example = 1;
     fRate = 20;
+    gliderGun = false;
     randomStart = false;
+    start();
+    frames();
+    stop = !stop;
+}
+
+function gliderGunStart(){
+    stop = !stop;
+    example = 0;
+    fRate = 20;
+    randomStart = false;
+    gliderGun = true;
     start();
     frames();
     stop = !stop;
