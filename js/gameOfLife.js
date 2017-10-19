@@ -32,6 +32,10 @@ function setup(){
     button = createButton("Conway's Game of Life");
     button.position(height/2, width/2);
     button.mousePressed(gameStart);
+    
+    button2 = createButton("Fire Simulation");
+    button2.position(height/2+10, width/2);
+    button2.mousePressed(fireStart);
 }
 
 function start(){
@@ -49,6 +53,16 @@ function gameStart(){
     example = 0;
     fRate = 5;
     randomStart = true;
+    start();
+    frames();
+    stop = !stop;
+}
+
+function gameStart(){
+    stop = !stop;
+    example = 1;
+    fRate = 20;
+    randomStart = false;
     start();
     frames();
     stop = !stop;
