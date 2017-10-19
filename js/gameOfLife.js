@@ -37,7 +37,7 @@ function setup(){
     button2.position(height/2, width/2+40);
     button2.mousePressed(fireStart);
     
-    button3 = createButton("Fire Simulation");
+    button3 = createButton("Glider Gun");
     button3.position(height/2, width/2-40);
     button3.mousePressed(gliderGunStart);
 }
