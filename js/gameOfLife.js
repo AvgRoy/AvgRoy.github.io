@@ -77,7 +77,7 @@ function fireStart(){
 function gliderGunStart(){
     stop = !stop;
     example = 0;
-    fRate = 20;
+    fRate = 5;
     randomStart = false;
     gliderGun = true;
     start();
