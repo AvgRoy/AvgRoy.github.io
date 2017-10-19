@@ -43,15 +43,15 @@ function setup(){
     
     sel = createSelect();
     sel.position(height/2, width/2+80);
-    sel.option('5');
-    sel.option('10');
-    sel.option('15');
-    sel.option('20');
-    sel.option('25');
-    sel.option('30');
-    sel.option('45');
-    sel.option('60');
-    sel.option('120');
+    sel.option(5);
+    sel.option(10);
+    sel.option(15);
+    sel.option(20);
+    sel.option(25);
+    sel.option(30);
+    sel.option(45);
+    sel.option(60);
+    sel.option(120);
     sel.changed(changeFrames);
 }
 
