@@ -40,6 +40,19 @@ function setup(){
     button3 = createButton("Glider Gun");
     button3.position(height/2, width/2-40);
     button3.mousePressed(gliderGunStart);
+    
+    sel = createSelect();
+    sel.position(10, 10);
+    sel.option('5');
+    sel.option('10');
+    sel.option('15');
+    sel.option('20');
+    sel.option('25');
+    sel.option('30');
+    sel.option('45');
+    sel.option('60');
+    sel.option('120');
+    sel.changed(changeFrames);
 }
 
 function start(){
@@ -55,34 +68,33 @@ function frames(){
 function gameStart(){
     stop = !stop;
     example = 0;
-    fRate = 5;
     randomStart = true;
     gliderGun = false;
     start();
-    frames();
     stop = !stop;
 }
 
 function fireStart(){
     stop = !stop;
     example = 1;
-    fRate = 20;
     gliderGun = false;
     randomStart = false;
     start();
-    frames();
     stop = !stop;
 }
 
 function gliderGunStart(){
     stop = !stop;
     example = 0;
-    fRate = 5;
     randomStart = false;
     gliderGun = true;
     start();
-    frames();
     stop = !stop;
+}
+
+function changeFrames() {
+  fRame = sel.value();
+  frames();
 }
 
 function startGameOfLife(){
