@@ -34,6 +34,9 @@ function setup(){
     sel2.option("Conway's: Random");
     sel2.option("Fire Simulation");
     sel2.option("Conway's: Glider Gun");
+    sel2.option("Conway's: Pulsar");
+    sel2.option("Conway's: Pentadecathlon");
+    sel2.option("Conway's: Blinker");
     sel2.selected("Fire Simulation");
     sel2.changed(changeCanvas);
 
@@ -67,6 +70,9 @@ function gameStart(){
     example = 0;
     randomStart = true;
     gliderGun = false;
+    pulsar = false;
+    pentadecathlon = false;
+    blinker = false;
     start();
     stop = !stop;
 }
@@ -74,8 +80,11 @@ function gameStart(){
 function fireStart(){
     stop = !stop;
     example = 1;
-    gliderGun = false;
     randomStart = false;
+    gliderGun = false;
+    pulsar = false;
+    pentadecathlon = false;
+    blinker = false;
     start();
     stop = !stop;
 }
@@ -85,6 +94,45 @@ function gliderGunStart(){
     example = 0;
     randomStart = false;
     gliderGun = true;
+    pulsar = false;
+    pentadecathlon = false;
+    blinker = false;
+    start();
+    stop = !stop;
+}
+
+function pulsarStart(){
+    stop = !stop;
+    example = 0;
+    randomStart = false;
+    gliderGun = false;
+    pulsar = true;
+    pentadecathlon = false;
+    blinker = false;
+    start();
+    stop = !stop;
+}
+
+function pentadecathlonStart(){
+    stop = !stop;
+    example = 0;
+    randomStart = false;
+    gliderGun = false;
+    pulsar = false;
+    pentadecathlon = true;
+    blinker = false;
+    start();
+    stop = !stop;
+}
+
+function blinkerStart(){
+    stop = !stop;
+    example = 0;
+    randomStart = false;
+    gliderGun = false;
+    pulsar = false;
+    pentadecathlon = false;
+    blinker = true;
     start();
     stop = !stop;
 }
@@ -98,16 +146,16 @@ function changeCanvas(){
     var newCanvas = sel2.value();
     if(newCanvas=="Fire Simulation") {
         fireStart();
-        example = 1;
     }
     else if(newCanvas=="Conway's: Random") {
         gameStart();
-        example = 0;
     }
     else if(newCanvas=="Conway's: Glider Gun"){
          gliderGunStart();
-         example = 0;
     }
+    else if(newCanvas=="Conway's: Pulsar") pulsarStart();
+    else if(newCanvas=="Conway's: Pentadecathlon") pentadecathlonStart();
+    else if(newCanvas=="Conway's: Blinker") blinkerStart();
 }
 
 function startGameOfLife(){
