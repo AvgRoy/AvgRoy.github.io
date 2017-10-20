@@ -66,3 +66,13 @@ body {
 .fa-twitter-square:hover{
   color: #1da1f2;
 }
+
+.fRate{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cSelect{
+    text-align: center;
+    margin-top: -40px;
+}

@@ -28,21 +28,17 @@ function setup(){
     var canvas = createCanvas(680, 460);
     canvas.parent('sketch-holder');
     start();
-    
-    button = createButton("Conway's Game of Life");
-    button.position(height/2, width/2);
-    button.mousePressed(gameStart);
-    
-    button2 = createButton("Fire Simulation");
-    button2.position(height/2, width/2+40);
-    button2.mousePressed(fireStart);
-    
-    button3 = createButton("Glider Gun");
-    button3.position(height/2, width/2-40);
-    button3.mousePressed(gliderGunStart);
-    
+
+    sel2 = createSelect();
+    sel2.parent('canvasSelector');
+    sel2.option("Conway's: Random");
+    sel2.option("Fire Simulation");
+    sel2.option("Conway's: Glider Gun");
+    sel2.selected("Fire Simulation");
+    sel2.changed(changeCanvas);
+
     sel = createSelect();
-    sel.position(height/2, width/2+80);
+    sel.parent('frameRateSelector');
     sel.option(5);
     sel.option(10);
     sel.option(15);
@@ -58,8 +54,8 @@ function setup(){
 
 function start(){
     frames();
-    if(example==0)startGameOfLife();
-    if(example==1)startFire();
+    if(example==0) startGameOfLife();
+    if(example==1) startFire();
 }
 
 function frames(){
@@ -96,6 +92,22 @@ function gliderGunStart(){
 function changeFrames() {
   fRate = parseInt(sel.value());
   frames();
+}
+
+function changeCanvas(){
+    var newCanvas = sel2.value();
+    if(newCanvas=="Fire Simulation") {
+        fireStart();
+        example = 1;
+    }
+    else if(newCanvas=="Conway's: Random") {
+        gameStart();
+        example = 0;
+    }
+    else if(newCanvas=="Conway's: Glider Gun"){
+         gliderGunStart();
+         example = 0;
+    }
 }
 
 function startGameOfLife(){
