@@ -74,5 +74,14 @@ body {
 
 .cSelect{
     text-align: center;
-    margin-top: -40px;
+    margin-top: -50px;
+}
+
+@media screen and (max-width: 270px){
+    .fRate{
+        visibility: hidden;
+    }
+    .cSelect{
+        visibility: hidden;
+    }
 }
